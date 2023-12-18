@@ -1,5 +1,8 @@
-function LoginPage() {
+import { useState } from "react";
 
+function LoginPage() {
+    // useState pour message de connexion (si logged in ou non)
+    const [message, setMessage] = useState(null);
     //  la fonction est asynchronne car il y a un fetch d'API
     const handleLogin = async (event) => {
         event.preventDefault();
@@ -37,6 +40,9 @@ function LoginPage() {
 
         if (token) {
             localStorage.setItem("jwt", token)
+            setMessage("Vous êtes bien connecté");
+        } else {
+            setMessage("Erreur lors de la connexion");
         }
 
     };
@@ -46,6 +52,7 @@ function LoginPage() {
         <>
             <p>Login page</p>
             <div>
+                {message && <p>{message}</p>}
                 <form onSubmit={handleLogin}>
                     <label>
                         username
