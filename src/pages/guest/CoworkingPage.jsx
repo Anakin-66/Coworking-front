@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import Footer from "../../components/Footer"
+import Footer from "../../components/guest/Footer"
 import Header from "../../components/guest/Header"
-import Nav from "../../components/Nav"
+import Nav from "../../components/guest/Nav"
+import { Link } from "react-router-dom";
 
 function CoworkingPage() {
-
 
     const [coworkings, setCoworkings] = useState(null);
 
@@ -34,6 +34,7 @@ function CoworkingPage() {
                             return (
                                 <article>
                                     <h2> {coworking.name} </h2>
+                                    <Link to={`/coworking/details/${coworking.id}`}>Voir le coworking</Link>
                                 </article>
                             )
 
