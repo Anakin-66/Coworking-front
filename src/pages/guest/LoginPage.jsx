@@ -35,7 +35,9 @@ function LoginPage() {
         // Récupération du Token
         const token = loginResponseData.data;
 
-        console.log(token);
+        if (token) {
+            localStorage.setItem("jwt", token)
+        }
 
     };
 
