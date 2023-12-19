@@ -5,6 +5,7 @@ import DashBoardPage from "./pages/admin/DashBoardPage";
 import CoworkingDetailsPage from "./pages/guest/CoworkingDetailsPage";
 import LoginPage from "./pages/guest/LoginPage";
 import AdminCoworkingsPage from "./pages/admin/AdminCoworkingsPage";
+import AdminCoworkingCreate from "./pages/admin/AdminCoworkingCreate";
 
 
 
@@ -20,6 +21,7 @@ function App() {
 
         <Route path="/admin" element={<DashBoardPage />} />
         <Route path="/admin/coworkings" element={<AdminCoworkingsPage />} />
+        <Route path="/admin/coworkings/create" element={<AdminCoworkingCreate />} />
       </Routes>
     </BrowserRouter>
   );

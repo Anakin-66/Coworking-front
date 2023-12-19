@@ -28,6 +28,7 @@ const CoworkingDetailsPage = () => {
                         <li>Jour : {coworking.data.price.day} e</li>
                         <li>Mois : {coworking.data.price.month} e</li>
                     </ul>
+                    {}
                     <p>
                         Adresse : {coworking.data.address.number} {coworking.data.address.street} - {coworking.data.address.city}{" "}
                     </p>
