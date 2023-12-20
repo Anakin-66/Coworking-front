@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function AdminCoworkingsPage() {
     const [coworkings, setCoworkings] = useState(null);
@@ -41,6 +42,9 @@ function AdminCoworkingsPage() {
                             <article>
                                 <h2>{coworking.name}</h2>
                                 <button onClick={(event) => handleDeleteCoworking(event, coworking.id)}>Supprimer</button>
+                                <Link to={`/admin/coworkings/update/${coworking.id}`}>
+                                    <button>Mettre à jour</button>
+                                </Link>
                             </article>
                         );
                     })}
